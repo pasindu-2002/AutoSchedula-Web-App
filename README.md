@@ -57,6 +57,16 @@ To get a local copy up and running, follow these simple steps.
    git clone https://github.com/your-username/AutoSchedula.git
 
 2. **Backend Setup (Java Spring Boot):**:
-   - Navigate to the backend folder.
-   - Install dependencies and set up environment variables if needed.
-   - Start the Spring Boot server.
+- Navigate to the backend folder.
+- Install dependencies and set up environment variables if needed.
+- Start the Spring Boot server.
+
+3. **Frontend Setup**:
+
+-For the web app, open the web directory and use any preferred local server to run the HTML/CSS/JavaScript files.
+-For the mobile app, navigate to the React Native project folder and run:
+   ```bash
+   npm install
+   npx react-native run-android # For Android
+   npx react-native run-ios # For iOS (if using macOS)
+
