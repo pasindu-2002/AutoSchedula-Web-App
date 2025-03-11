@@ -1,0 +1,99 @@
+.developers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 90vh;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.developer {
+    background: #fff;
+    border-radius: 10px;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.profile-picture-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 20px;
+    width: 250px;
+}
+
+.heading.role {
+    font-size: 25px;
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content: start;
+}
+
+.contact-links .contact-link {
+    width: 30px;
+}
+
+.developer-details-container {
+    display: grid;
+    gap: 10px;
+}
+
+.developer-details-container .basic-details .field {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 7px;
+    font-size: 20px;
+}
+
+.developer-details-container .basic-details .field.email .value {
+    font-size: 18px;
+}
+
+.developer-details-container .basic-details .value,
+.developer-details-container .basic-details .value a {
+    color: dodgerblue;
+}
+
+.contact-details-container .heading {
+    font-size: 19px;
+}
+
+@media (max-width: 1120px) {
+    .developer-details-container .basic-details .field {
+        font-size: 16px;
+    }
+
+    .developer-details-container .basic-details .field.email .value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 940px) {
+    .developers-container {
+        grid-template-columns: none;
+        grid-auto-flow: row;
+        overflow-y: scroll;
+    }
+}

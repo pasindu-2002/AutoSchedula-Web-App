@@ -1,0 +1,15 @@
+.subjects .top-sub-container {
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-columns: 63% auto;
+    gap: 10px;
+}
+
+.subjects .save-btn-container button {
+    margin-top: 20px;
+}
+
+.date-input{
+    margin: 30px;
+    width: 20%;
+}
