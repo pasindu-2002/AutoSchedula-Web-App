@@ -14,37 +14,37 @@ const menus = [
     {
         name: "Dashboard",
         icon: <Dashboard />,
-        link: "/"
+        link: "/dash"
     },
     {
         name: "Time Tables",
         icon: <TimeTables />,
-        link: "/TimeTables"
+        link: "/dash/TimeTables"
     },
     {
         name: "Course",
         icon: <EditSubjects />,
-        link: "/Course"
+        link: "/dash/Course"
     },
     {
         name: "Lecturers",
         icon: <EditTeachers />,
-        link: "/Lecturer"
+        link: "/dash/Lecturer"
     },
     {
         name: "Batch",
         icon: <EditSubjects />,
-        link: "/Batch"
+        link: "/dash/Batch"
     },
     {
         name: "Students",
         icon: <Contact />,
-        link: "/Students"
+        link: "/dash/Students"
     },
     {
         name: "Modules",
         icon: <Files />,
-        link: "/Modules"
+        link: "/dash/Modules"
     },
     
    

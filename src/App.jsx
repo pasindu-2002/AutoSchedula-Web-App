@@ -17,19 +17,35 @@ import { ConfirmProvider, useConfirm } from './Components/ConfirmContextProvider
 import Confirm from './Components/Confirm';
 import { addWindowCloseEventHandler, removeWindowCloseEventHandler } from './Script/commonJS';
 import NotFound from './Pages/NotFound/NotFound';
+import LoginPage from './Pages/Login/LoginPage';
 
 function App() {
+    const isAuthenticated = false; // Check if the user is logged in
+
     return (
         <AlertProvider>
             <ConfirmProvider>
-                <BrowserRouter future={{
-                    v7_startTransition: true,
-                    v7_relativeSplatPath: true,
-                }}>
-                    <MainApp />
+                <BrowserRouter>
+                    {isAuthenticated ? <MainApp /> : <LoginApp />}
                 </BrowserRouter>
             </ConfirmProvider>
         </AlertProvider>
+    );
+}
+
+function LoginApp() {
+    const app = useRef(null);
+
+    return (
+        <div className='app' ref={app}>
+            <Alert />
+            <Confirm />
+            <div className='login-container'>
+                <Routes>
+                    <Route path="/" element={<LoginPage />} />
+                </Routes>
+            </div>
+        </div>
     );
 }
 
@@ -71,13 +87,14 @@ function MainApp() {
 
             <div className='main-container'>
                 <Routes>
-                    <Route path="/" element={<DashboardPage />} />
-                    <Route path="/Course" element={<AddCoursePage />} />
-                    <Route path="/Lecturer" element={<AddLecturerPage />} />
-                    <Route path="/Batch" element={<AddBatchPage />} />
-                    <Route path="/Students" element={<StudentPage />} />
-                    <Route path="/Modules" element={<ModulePage />} />
-                    <Route path="/TimeTables" element={<TimeTablesPage />} />
+                
+                    <Route path="/dash" element={<DashboardPage />} />
+                    <Route path="/dash/Course" element={<AddCoursePage />} />
+                    <Route path="/dash/Lecturer" element={<AddLecturerPage />} />
+                    <Route path="/dash/Batch" element={<AddBatchPage />} />
+                    <Route path="/dash/Students" element={<StudentPage />} />
+                    <Route path="/dash/Modules" element={<ModulePage />} />
+                    <Route path="/dash/TimeTables" element={<TimeTablesPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <OwnerFooter />

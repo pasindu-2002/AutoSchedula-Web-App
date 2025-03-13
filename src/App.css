@@ -12,6 +12,13 @@ html {
 	grid-template-columns: 16% auto;
 	transition: 0.3s;
 }
+.login-container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
 
 .main-container {
 	display: flex;
